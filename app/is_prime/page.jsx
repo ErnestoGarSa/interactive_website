@@ -28,38 +28,40 @@ const page = () => {
 
   return (
     <>
-      <h2 className="title">
-        Please enter a number to check if it´s a prime number
-      </h2>
-      <form
-        onSubmit={(ev) => {
-          setInteger(Number(ev.target.int.value));
-          ev.target.int.value = "";
-          ev.preventDefault();
-        }}
-        className="d-flex flex-column align-items-center m-3 "
-      >
-        <label htmlFor="int" className="label">
-          Please enter a number to check if it´s prime
-        </label>
-        <br />
-        <input type="text" name="int" id="int" />
-        <br />
-        <button
-          type="submit"
-          onClick={() => {
-            isPrime(integer);
+      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+        <h2 className="title">
+          Please enter a number to check if it´s a prime number
+        </h2>
+        <form
+          onSubmit={(ev) => {
+            setInteger(Number(ev.target.int.value));
+            ev.target.int.value = "";
+            ev.preventDefault();
           }}
-          className="btn btn-lg btn-success"
+          className="d-flex flex-column align-items-center m-3 "
         >
-          Check
-        </button>
-      </form>
-      {integer !== undefined && (
-        <h2
-          className={`${color} text-center pb-3`}
-        >{`The number ${integer} is ${message}`}</h2>
-      )}
+          <label htmlFor="int" className="label">
+            Please enter a number to check if it´s prime
+          </label>
+          <br />
+          <input type="number" name="int" id="int" />
+          <br />
+          <button
+            type="submit"
+            onClick={() => {
+              isPrime(integer);
+            }}
+            className="btn btn-lg btn-success"
+          >
+            Check
+          </button>
+        </form>
+        {integer !== undefined && (
+          <h2
+            className={`${color} text-center pb-3`}
+          >{`The number ${integer} is ${message}`}</h2>
+        )}
+      </div>
     </>
   );
 };

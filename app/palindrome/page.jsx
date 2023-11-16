@@ -25,31 +25,35 @@ export default function Home() {
   };
   return (
     <>
-      <h2 className="title">
-        Please enter a word to check if it´s a palindrome word
-      </h2>
-      <form
-        onSubmit={(ev) => {
-          setWord(ev.target.word.value);
-          ev.preventDefault();
-        }}
-        className="d-flex flex-column align-items-center m-3 "
-      >
-        <label htmlFor="word" className="label">
-          Please enter a word
-        </label>
-        <br />
-        <input type="text" name="word" id="word" />
-        <br />
-        <button type="submit" className="btn btn-lg btn-success ">
-          Check
-        </button>
-      </form>
-      {result && (
-        <>
-          <h2 className={`${color} text-center pb-3`}>{`${word} ${result}`}</h2>
-        </>
-      )}
+      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+        <h2 className="title">
+          Please enter a word to check if it´s a palindrome word
+        </h2>
+        <form
+          onSubmit={(ev) => {
+            setWord(ev.target.word.value);
+            ev.preventDefault();
+          }}
+          className="d-flex flex-column align-items-center m-3 "
+        >
+          <label htmlFor="word" className="label">
+            Please enter a word
+          </label>
+          <br />
+          <input type="text" name="word" id="word" />
+          <br />
+          <button type="submit" className="btn btn-lg btn-success ">
+            Check
+          </button>
+        </form>
+        {result && (
+          <>
+            <h2
+              className={`${color} text-center pb-3`}
+            >{`${word} ${result}`}</h2>
+          </>
+        )}
+      </div>
     </>
   );
 }

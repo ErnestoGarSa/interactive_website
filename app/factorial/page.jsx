@@ -18,30 +18,32 @@ const page = () => {
   };
   return (
     <>
-      <h2 className="title">Please enter a number to print it´s factorial</h2>
-      <form
-        onSubmit={(ev) => {
-          setDigit(parseInt(ev.target.number.value));
-          ev.target.number.value = "";
-          ev.preventDefault();
-        }}
-        className="d-flex flex-column align-items-center m-3 "
-      >
-        <label htmlFor="number" className="label">
-          Please enter a number
-        </label>
-        <br />
-        <input type="number" name="number" id="number" />
-        <br />
-        <button type="submit" className="btn btn-lg btn-success ">
-          Check
-        </button>
-      </form>
-      {digit && (
-        <>
-          <h2 className="true text-center">{`The factorial of ${digit} is = ${finalFactorial}`}</h2>
-        </>
-      )}
+      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+        <h2 className="title">Please enter a number to print it´s factorial</h2>
+        <form
+          onSubmit={(ev) => {
+            setDigit(ev.target.number.value);
+            ev.target.number.value = "";
+            ev.preventDefault();
+          }}
+          className="d-flex flex-column align-items-center m-3 "
+        >
+          <label htmlFor="number" className="label">
+            Please enter a number
+          </label>
+          <br />
+          <input type="number" name="number" id="number" />
+          <br />
+          <button type="submit" className="btn btn-lg btn-success ">
+            Check
+          </button>
+        </form>
+        {digit && (
+          <>
+            <h2 className="true text-center">{`The factorial of ${digit} is = ${finalFactorial}`}</h2>
+          </>
+        )}
+      </div>
     </>
   );
 };

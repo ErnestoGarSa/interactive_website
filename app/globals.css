@@ -12,6 +12,12 @@
   color: white;
 }
 
+.container {
+  min-height: 37rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .para {
   font-size: 1.5rem;
 }
@@ -25,6 +31,12 @@
   color: rgb(190, 19, 209);
 }
 
+.footer-icon {
+  color: greenyellow;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .email {
   text-align: center;
   text-decoration: none;
@@ -35,7 +47,6 @@
 .title {
   color: rgb(0, 163, 225);
   text-align: center;
-  margin-top: 1rem;
 }
 
 .label {
