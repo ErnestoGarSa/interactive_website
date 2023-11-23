@@ -26,7 +26,7 @@ const page = () => {
 
   return (
     <>
-      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+      <div className="container d-flex flex-column justify-content-center align-items-center">
         <h2 className="title">
           Please enter a set of numbers to print them in ascending sort
         </h2>

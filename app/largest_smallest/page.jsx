@@ -36,7 +36,7 @@ const page = () => {
 
   return (
     <>
-      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+      <div className="container d-flex flex-column justify-content-center align-items-center">
         <h2 className="title">
           Please enter a set of numbers to check which one is the largest and
           which one is the smallest

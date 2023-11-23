@@ -18,7 +18,7 @@ const page = () => {
   };
   return (
     <>
-      <div className="container h-75 d-flex flex-column justify-content-center align-items-center">
+      <div className="container  d-flex flex-column justify-content-center align-items-center">
         <h2 className="title">Please enter a number to print it´s factorial</h2>
         <form
           onSubmit={(ev) => {
