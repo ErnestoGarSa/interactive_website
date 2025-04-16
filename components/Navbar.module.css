@@ -1,0 +1,28 @@
+.navbar {
+  background-color: rgb(22, 60, 77);
+}
+
+.nav_title {
+  color: rgb(102, 205, 102);
+}
+
+.nav_link {
+  color: rgb(255, 210, 105);
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  color: rgb(255, 194, 51);
+}
+
+.navbar_toggler {
+  background-color: #66cd66;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar_toggler:hover {
+  background-color: #5bb85b;
+}

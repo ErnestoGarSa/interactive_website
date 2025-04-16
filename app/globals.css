@@ -4,14 +4,6 @@
   margin: 0;
 }
 
-.navbar {
-  background-color: rgb(29%, 48%, 11%);
-}
-
-.nav-link:hover {
-  color: white;
-}
-
 .container {
   min-height: 37rem;
   align-items: center;
