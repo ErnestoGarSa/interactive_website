@@ -1,3 +1,7 @@
+.main {
+  background-color: rgb(245, 245, 245);
+}
+
 .container_content {
   min-height: 80vh;
   align-items: center;
