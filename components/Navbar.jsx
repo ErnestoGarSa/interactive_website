@@ -37,7 +37,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={`${classes.nav_link}`} href="/is_prime">
+              <Link className={`${classes.nav_link}`} href="/isPrime">
                 Is prime
               </Link>
             </li>
