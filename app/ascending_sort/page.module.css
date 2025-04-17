@@ -1,0 +1,20 @@
+.main {
+  background-color: rgb(245, 245, 245);
+}
+
+.container_content {
+  min-height: 85vh;
+}
+
+.result {
+  color: rgb(102, 205, 102);
+}
+
+.btn_sub {
+  background-color: rgb(255, 210, 105);
+  width: 100%;
+}
+
+.btn_sub:hover {
+  background-color: rgb(255, 194, 51);
+}

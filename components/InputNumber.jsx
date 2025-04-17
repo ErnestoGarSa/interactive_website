@@ -1,8 +1,20 @@
 import classes from "./InputNumber.module.css";
 
-const InputNumber = () => {
+const InputNumber = ({ label }) => {
   return (
-    <input type="number" name="int" id="int" className={`${classes.input}`} />
+    <>
+      <label htmlFor="number" className="label">
+        {label}
+      </label>
+      <br />
+      <input
+        type="number"
+        name="number"
+        id="number"
+        className={`${classes.input}`}
+      />
+      <br />
+    </>
   );
 };
 

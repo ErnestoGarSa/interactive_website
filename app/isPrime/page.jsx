@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import InputNumber from "@/components/InputNumber";
 
 import classes from "./page.module.css";
+import ButtonCheck from "@/components/ButtonCheck";
 
 const page = () => {
   let [integer, setInteger] = useState();
@@ -16,16 +17,16 @@ const page = () => {
 
   const isPrime = (number) => {
     if (number <= 1) {
-      setColor("false");
+      setColor(classes.negative);
       return "Not Prime";
     } else {
       for (let i = 2; i <= Math.sqrt(number); i++) {
         if (number % i === 0) {
-          setColor("false");
+          setColor(classes.negative);
           return "Not Prime";
         }
       }
-      setColor("true");
+      setColor(classes.positive);
       return "Prime";
     }
   };
@@ -38,31 +39,18 @@ const page = () => {
       <h2>Please enter a number to check if it's a prime number</h2>
       <form
         onSubmit={(ev) => {
-          setInteger(Number(ev.target.int.value));
-          ev.target.int.value = "";
+          setInteger(Number(ev.target.number.value));
+          ev.target.number.value = "";
           ev.preventDefault();
         }}
         className="d-flex flex-column align-items-center m-3 "
       >
-        <label htmlFor="int" className="label">
-          Please enter a number to check if it´s prime
-        </label>
-        <br />
-        <InputNumber />
-        <br />
-        <button
-          type="submit"
-          onClick={() => {
-            isPrime(integer);
-          }}
-          className="btn btn-lg btn-success"
-        >
-          Check
-        </button>
+        <InputNumber label="Please enter a number to check if it's prime" />
+        <ButtonCheck />
       </form>
       {integer !== undefined && (
         <h2
-          className={`${color} text-center pb-3`}
+          className={`${color} text-center`}
         >{`The number ${integer} is ${message}`}</h2>
       )}
     </main>

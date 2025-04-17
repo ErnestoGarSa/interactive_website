@@ -1,8 +1,15 @@
 import classes from "./InputText.module.css";
 
-const InputText = () => {
+const InputText = ({ label }) => {
   return (
-    <input type="text" name="word" id="word" className={`${classes.input}`} />
+    <>
+      <label htmlFor="word" className="label">
+        {label}
+      </label>
+      <br />
+      <input type="text" name="word" id="word" className={`${classes.input}`} />
+      <br />
+    </>
   );
 };
 

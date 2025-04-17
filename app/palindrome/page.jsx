@@ -41,12 +41,8 @@ export default function page() {
         }}
         className="d-flex flex-column align-items-center m-3 "
       >
-        <label htmlFor="word" className="label">
-          Please enter a word
-        </label>
-        <br />
-        <InputText />
-        <br />
+        <InputText label="Please enter a word" />
+
         <ButtonCheck />
       </form>
       {result && (

@@ -1,5 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import Title from "@/components/Title";
+
+import classes from "./page.module.css";
+import ButtonCheck from "@/components/ButtonCheck";
+import InputText from "@/components/InputText";
 
 const page = () => {
   const [sentence, setSentence] = useState("");
@@ -14,36 +19,30 @@ const page = () => {
   };
 
   return (
-    <>
-      <div className="container d-flex flex-column justify-content-center align-items-center">
-        <h2 className="title">
-          Please enter sentence to print the reverse order of words
-        </h2>
-        <form
-          onSubmit={(ev) => {
-            setSentence(ev.target.sentence.value);
-            ev.target.sentence.value = "";
-            ev.preventDefault();
-          }}
-          className="d-flex flex-column align-items-center m-3"
-        >
-          <label htmlFor="sentence" className="label">
-            Please enter a sentence
-          </label>
-          <br />
-          <input type="text" name="sentence" id="sentence" />
-          <br />
-          <button type="submit" className="btn btn-lg btn-success ">
-            Check
-          </button>
-        </form>
-        {revSentence && (
-          <>
-            <h2 className="true text-center pb-3">{`Your sentence in reverse is: ${revSentence}`}</h2>
-          </>
-        )}
-      </div>
-    </>
+    <main
+      className={`${classes.container_content} container d-flex flex-column justify-content-center align-items-center`}
+    >
+      <Title title="Reverse Sentence" />
+      <h2>Please enter sentence to print the reverse order of words</h2>
+      <form
+        onSubmit={(ev) => {
+          setSentence(ev.target.word.value);
+          ev.target.word.value = "";
+          ev.preventDefault();
+        }}
+        className="d-flex flex-column align-items-center m-3"
+      >
+        <InputText label="Please enter a sentence" />
+        <ButtonCheck />
+      </form>
+      {revSentence && (
+        <>
+          <h2
+            className={`${classes.result} text-center pb-3`}
+          >{`Your sentence in reverse is: ${revSentence}`}</h2>
+        </>
+      )}
+    </main>
   );
 };
 

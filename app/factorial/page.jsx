@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import classes from "./page.module.css";
 import ButtonCheck from "@/components/ButtonCheck";
+import InputNumber from "@/components/InputNumber";
 
 const page = () => {
   let [digit, setDigit] = useState();
@@ -33,17 +34,7 @@ const page = () => {
         }}
         className="d-flex flex-column align-items-center m-3 "
       >
-        <label htmlFor="number" className="label">
-          Please enter a number
-        </label>
-        <br />
-        <input
-          type="number"
-          name="number"
-          id="number"
-          className={`${classes.input}`}
-        />
-        <br />
+        <InputNumber label="Please enter a number " />
         <ButtonCheck />
       </form>
       {digit && (

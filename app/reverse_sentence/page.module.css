@@ -1,0 +1,11 @@
+.main {
+  background-color: rgb(245, 245, 245);
+}
+
+.container_content {
+  min-height: 85vh;
+}
+
+.result {
+  color: rgb(102, 205, 102);
+}
