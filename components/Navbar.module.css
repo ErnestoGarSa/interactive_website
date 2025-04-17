@@ -6,6 +6,10 @@
   color: rgb(102, 205, 102);
 }
 
+.nav_title:hover {
+  color: rgb(91, 184, 91);
+}
+
 .nav_link {
   color: rgb(255, 210, 105);
   text-decoration: none;
