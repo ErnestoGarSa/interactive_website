@@ -1,0 +1,8 @@
+.btn_sub {
+  background-color: rgb(255, 210, 105);
+  width: 100%;
+}
+
+.btn_sub:hover {
+  background-color: rgb(255, 194, 51);
+}

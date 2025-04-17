@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+import classes from "./page.module.css";
+import ButtonCheck from "@/components/ButtonCheck";
+import InputText from "@/components/InputText";
+
+export default function page() {
   const [word, setWord] = useState("");
   const [result, setResult] = useState("");
   const [color, setColor] = useState("");
@@ -15,45 +19,41 @@ export default function Home() {
       string = string.toLowerCase();
 
       if (string === string.split("").reverse().join("")) {
-        setResult("Is a Palindrome word");
-        setColor("true");
+        setResult("is a Palindrome word");
+        setColor(classes.positive);
       } else {
-        setResult("Is not a Palindrome word");
-        setColor("false");
+        setResult("is not a Palindrome word");
+        setColor(classes.negative);
       }
     }
   };
   return (
-    <>
-      <div className="container  d-flex flex-column justify-content-center align-items-center">
-        <h2 className="title">
-          Please enter a word to check if it´s a palindrome word
-        </h2>
-        <form
-          onSubmit={(ev) => {
-            setWord(ev.target.word.value);
-            ev.preventDefault();
-          }}
-          className="d-flex flex-column align-items-center m-3 "
-        >
-          <label htmlFor="word" className="label">
-            Please enter a word
-          </label>
-          <br />
-          <input type="text" name="word" id="word" />
-          <br />
-          <button type="submit" className="btn btn-lg btn-success ">
-            Check
-          </button>
-        </form>
-        {result && (
-          <>
-            <h2
-              className={`${color} text-center pb-3`}
-            >{`${word} ${result}`}</h2>
-          </>
-        )}
-      </div>
-    </>
+    <main
+      className={`container d-flex flex-column justify-content-center align-items-center ${classes.container_content}`}
+    >
+      <h1 className={`${classes.title}`}>Palindrome</h1>
+      <h2>Please enter a word to check if it's a palindrome word</h2>
+      <form
+        onSubmit={(ev) => {
+          setWord(ev.target.word.value);
+          ev.preventDefault();
+          ev.target.word.value = "";
+        }}
+        className="d-flex flex-column align-items-center m-3 "
+      >
+        <label htmlFor="word" className="label">
+          Please enter a word
+        </label>
+        <br />
+        <InputText />
+        <br />
+        <ButtonCheck />
+      </form>
+      {result && (
+        <>
+          <h2 className={`${color} text-center pb-3`}>{`${word} ${result}`}</h2>
+        </>
+      )}
+    </main>
   );
 }

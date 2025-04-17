@@ -1,0 +1,27 @@
+.main {
+  background-color: rgb(245, 245, 245);
+}
+
+.container_content {
+  min-height: 85vh;
+}
+
+.title {
+  color: rgb(22, 60, 77);
+}
+
+.input {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.input:focus {
+  outline: 2px solid rgb(102, 205, 102); /* Contorno azul al hacer clic */
+  background-color: #e6f7ff; /* Fondo azul claro al hacer clic */
+}
+
+.output {
+  color: rgb(102, 205, 102);
+}
