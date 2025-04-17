@@ -4,21 +4,6 @@
   margin: 0;
 }
 
-.footer {
-  background-color: black;
-  height: 20vh;
-}
-
-.contact {
-  color: rgb(190, 19, 209);
-}
-
-.footer-icon {
-  color: greenyellow;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .email {
   text-align: center;
   text-decoration: none;
