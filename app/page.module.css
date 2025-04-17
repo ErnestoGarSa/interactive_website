@@ -1,0 +1,10 @@
+.container_content {
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(22, 60, 77);
+  text-align: center;
+}
